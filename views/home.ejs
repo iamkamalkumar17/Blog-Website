@@ -1,7 +1,9 @@
 <%- include("partials/header.ejs") -%>
 
 <h1>home</h1>
+<p><%= startingContent %></p>
 
-<p><%= content %></p>
-
-<%- include("partials/footer.ejs") -%>
+<% content.forEach(function (post) { %>
+<h2><%= post.title %></h2>
+<p><%= post.content %></p>
+<% }) %> <%- include("partials/footer.ejs") -%>
